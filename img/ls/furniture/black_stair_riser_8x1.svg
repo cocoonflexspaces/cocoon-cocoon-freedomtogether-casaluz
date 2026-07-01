@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect width="400" height="300" fill="#ffffff"/>
+  <!-- Shadow -->
+  <ellipse cx="200" cy="258" rx="145" ry="10" fill="#e0e0e0"/>
+  <!-- Stair riser body — long, low rectangle (8ft × 1ft proportion) -->
+  <!-- 3D perspective box: top face, front face, right side face -->
+  <!-- Front face (main) -->
+  <rect x="48" y="180" width="280" height="68" fill="#1a1a1a" rx="2"/>
+  <!-- Top face -->
+  <polygon points="48,180 82,148 362,148 328,180" fill="#3a3a3a"/>
+  <!-- Right side face -->
+  <polygon points="328,180 362,148 362,216 328,248" fill="#111111"/>
+  <!-- Carpet/rubber top texture lines -->
+  <line x1="82" y1="150" x2="362" y2="150" stroke="#555" stroke-width="1" opacity="0.5"/>
+  <line x1="82" y1="153" x2="362" y2="153" stroke="#555" stroke-width="1" opacity="0.3"/>
+  <!-- Label area -->
+  <text x="200" y="272" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" fill="#4a4a4a" text-anchor="middle" letter-spacing="1">BLACK STAIR RISER  8′×1′</text>
+</svg>

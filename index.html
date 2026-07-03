@@ -201,9 +201,19 @@
   .callout .lede { color: rgba(255,255,255,0.88); }
 
   /* DIVIDER LABEL */
-  .divider-label { display: grid; grid-template-columns: auto 1fr; gap: 24px; align-items: center; margin: 0 0 32px; }
+  .divider-label { display: grid; grid-template-columns: auto 1fr auto; gap: 24px; align-items: center; margin: 0 0 28px; }
   .divider-label .text { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; color: var(--terracotta); white-space: nowrap; }
   .divider-label .line { height: 1px; background: var(--rule); }
+
+  /* PRODUCT CARDS (F&B rental selection) */
+  .photo-grid.four { grid-template-columns: repeat(4, 1fr); }
+  @media (max-width: 900px) { .photo-grid.four { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 500px) { .photo-grid.four { grid-template-columns: 1fr 1fr; } }
+  .product-card { background: #FFF; border: 1px solid var(--rule); display: flex; flex-direction: column; }
+  .product-card .photo img { aspect-ratio: 1/1; object-fit: cover; width: 100%; display: block; }
+  .product-card .meta { padding: 14px 18px 16px; }
+  .product-card .meta .name { font-size: 14px; font-weight: 600; line-height: 1.3; margin: 0 0 4px; }
+  .product-card .meta .desc { font-size: 12px; color: var(--ink-soft); margin: 0; line-height: 1.4; }
 
   /* BREAKDOWN TABLE */
   .breakdown { background: #FFF; border: 1px solid var(--rule); padding: 0; margin-top: 32px; }
@@ -386,7 +396,7 @@
     </div>
     <div>
       <p class="lede">Soomin, it was a pleasure working with your team to bring this retreat together at Casa Luz. Three days of strategy, somatics, and shared meals — and a space that can hold all of it.</p>
-      <p class="body" style="color:var(--ink-soft);">Casa Luz's 2nd floor is one of our most versatile — a full loft that opens up for movement work and closes down for boardroom focus. We've lined up everything you'll need: furniture rental options from our partner Lightning Society, and catering proposals from three of our vetted caterers — both reviewed and priced with your dietary requirements in mind.</p>
+      <p class="body" style="color:var(--ink-soft);">Casa Luz's 2nd floor is one of our most versatile — a full loft that opens up for movement work and closes down for boardroom focus. We've lined up everything you'll need: furniture rental options curated by Cocoon, and catering proposals from three of our vetted caterers — both reviewed and priced with your dietary requirements in mind.</p>
       <p class="body" style="color:var(--ink-soft);">This proposal is your complete picture. Take your time reviewing it — I'm here for any questions.</p>
       <p style="margin-top:28px;font-weight:600;font-size:15px;">Eduard Monteagudo<br><span style="font-weight:400;color:var(--ink-soft);">Cocoon Flex Spaces</span></p>
     </div>
@@ -507,7 +517,7 @@
   <div class="inner">
     <div class="superhead" style="margin-bottom:20px;">Furniture Rental</div>
     <h2 class="title" style="font-size:clamp(36px,5vw,72px);">Everything you need,<br>delivered and set up.</h2>
-    <p class="lede" style="margin-top:24px;max-width:640px;">Casa Luz arrives empty — a blank canvas. Through our partner Lightning Society, we can furnish the entire space: premium lounge seating, meeting tables, dining setup, ambient lighting, and greenery. All priced below, with our coordination fee included.</p>
+    <p class="lede" style="margin-top:24px;max-width:640px;">Casa Luz arrives empty — a blank canvas. Casa Luz arrives as a blank canvas — we furnish the entire space for you: premium lounge seating, meeting tables, dining setup, ambient lighting, and greenery. All priced below, with our coordination fee included.</p>
   </div>
 </div>
 
@@ -515,7 +525,7 @@
      FURNITURE SECTION
 ═══════════════════════════════════════════ -->
 <section>
-  <div class="superhead" style="margin-bottom:8px;">Lightning Society × Cocoon</div>
+  <div class="superhead" style="margin-bottom:8px;">Casa Luz × Cocoon</div>
   <h2 class="headline">Furniture Rental Catalog</h2>
   <p class="body" style="color:var(--ink-soft);max-width:640px;">Select the pieces that fit your setup. Prices shown are all-in per piece for the full event (July 7–9). Cocoon coordinates delivery, setup before Day 1, and breakdown after Day 3.</p>
 
@@ -794,7 +804,7 @@
 ═══════════════════════════════════════════ -->
 <section class="tight" style="background:var(--cream-deep);max-width:none;">
   <div style="max-width:var(--max);margin:0 auto;padding:0 clamp(24px,5vw,80px);">
-  <div class="superhead" style="margin-bottom:8px;">Lightning Society × Cocoon</div>
+  <div class="superhead" style="margin-bottom:8px;">Casa Luz × Cocoon</div>
   <h2 class="headline">Décor Catalog</h2>
   <p class="body" style="color:var(--ink-soft);max-width:640px;">Greenery, ambient lighting, and finishing touches to dress the space. All coordinated and installed by Cocoon.</p>
 
@@ -910,9 +920,9 @@
      AV / LIGHTING TECH SECTION
 ═══════════════════════════════════════════ -->
 <section>
-  <div class="superhead" style="margin-bottom:8px;">Lightning Society × Cocoon</div>
+  <div class="superhead" style="margin-bottom:8px;">Casa Luz × Cocoon</div>
   <h2 class="headline">AV & Lighting Tech</h2>
-  <p class="body" style="color:var(--ink-soft);max-width:640px;">Professional audio, projection, and performance lighting — operated by a Lightning Society technical engineer. Select the package that fits each day's programming needs.</p>
+  <p class="body" style="color:var(--ink-soft);max-width:640px;">Professional audio, projection, and performance lighting — operated by a Cocoon AV technician. Select the package that fits each day's programming needs.</p>
 
   <!-- SPEAKERS -->
   <div class="cat-label">
@@ -1114,7 +1124,65 @@
     </div>
   </div>
 
-  <p style="margin-top:32px;font-size:13px;color:var(--ink-mute);">A Lightning Society technical engineer is available at $91/hr to operate sound and lighting systems. Final AV package confirmed once programming schedule is set.</p>
+  <p style="margin-top:32px;font-size:13px;color:var(--ink-mute);">A Cocoon AV technician is available at $91/hr to operate sound and lighting systems. Final AV package confirmed once programming schedule is set.</p>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     YOUR SELECTION — FURNITURE, DÉCOR & AV
+═══════════════════════════════════════════ -->
+<section class="tight" style="background:var(--cream-deep);max-width:none;border-top:2px solid var(--terracotta);">
+  <div style="max-width:var(--max);margin:0 auto;padding:0 clamp(24px,5vw,80px);">
+    <div class="superhead" style="margin-bottom:8px;color:var(--terracotta);">Confirmed Selection</div>
+    <h2 class="headline">Furniture, Décor &amp; AV.</h2>
+    <p class="body" style="color:var(--ink-soft);max-width:640px;margin-bottom:40px;">Your final selection — confirmed and reserved for July 7–9.</p>
+
+    <div class="breakdown">
+      <table>
+        <thead>
+          <tr><th>Item</th><th class="qty">Qty</th><th class="amount">Unit</th><th class="amount">Total</th></tr>
+        </thead>
+        <tbody>
+          <tr class="section-head"><td colspan="4">Premium Seating</td></tr>
+          <tr><td>Channing Swivel Chair</td><td class="qty">4</td><td class="amount">$234</td><td class="amount">$936</td></tr>
+          <tr><td>Augustine Swivel Chair <span class="note">Velvet</span></td><td class="qty">2</td><td class="amount">$163</td><td class="amount">$326</td></tr>
+          <tr><td>Ellsworth Sofa <span class="note">91″ length</span></td><td class="qty">1</td><td class="amount">$410</td><td class="amount">$410</td></tr>
+          <tr><td>Warren Chair</td><td class="qty">1</td><td class="amount">$182</td><td class="amount">$182</td></tr>
+          <tr><td>Sinclair Round Ottoman <span class="note">16″ height</span></td><td class="qty">4</td><td class="amount">$52</td><td class="amount">$208</td></tr>
+          <tr><td>Tufted Ottoman — Green <span class="note">2×2 ft</span></td><td class="qty">1</td><td class="amount">$98</td><td class="amount">$98</td></tr>
+
+          <tr class="section-head"><td colspan="4">Premium Tables</td></tr>
+          <tr><td>Ingrid Coffee Table <span class="note">Two-piece nesting</span></td><td class="qty">1</td><td class="amount">$299</td><td class="amount">$299</td></tr>
+          <tr><td>Figueroa End Table</td><td class="qty">2</td><td class="amount">$78</td><td class="amount">$156</td></tr>
+          <tr><td>Corbett End Table</td><td class="qty">1</td><td class="amount">$78</td><td class="amount">$78</td></tr>
+
+          <tr class="section-head"><td colspan="4">Basic Event Furniture</td></tr>
+          <tr><td>Industrial Clothing Rack <span class="note">63″W × 62″H</span></td><td class="qty">1</td><td class="amount">$26</td><td class="amount">$26</td></tr>
+          <tr><td>Folding Table <span class="note">6 ft</span></td><td class="qty">1</td><td class="amount">$20</td><td class="amount">$20</td></tr>
+          <tr><td>White Banquet Chairs <span class="note">Resin / padded · circle of chairs</span></td><td class="qty">16</td><td class="amount">$7</td><td class="amount">$112</td></tr>
+
+          <tr class="section-head"><td colspan="4">Plants &amp; Greenery</td></tr>
+          <tr><td>Faux Olive Tree</td><td class="qty">2</td><td class="amount">$59</td><td class="amount">$118</td></tr>
+          <tr><td>Faux Pieris Tree</td><td class="qty">2</td><td class="amount">$59</td><td class="amount">$118</td></tr>
+
+          <tr class="section-head"><td colspan="4">Ambient Lighting</td></tr>
+          <tr><td>Nerissa Floor Lamp</td><td class="qty">1</td><td class="amount">$150</td><td class="amount">$150</td></tr>
+          <tr><td>Fordham Floor Lamp</td><td class="qty">1</td><td class="amount">$208</td><td class="amount">$208</td></tr>
+
+          <tr class="section-head"><td colspan="4">AV / Sound</td></tr>
+          <tr><td>Sonos / Sonance In-Wall Surround Sound <span class="note">Building system</span></td><td class="qty">1</td><td class="amount">$390</td><td class="amount">$390</td></tr>
+
+          <tr class="subtotal"><td colspan="3">Subtotal</td><td class="amount">$3,835</td></tr>
+          <tr class="subtle">
+            <td colspan="3">NY State Sales Tax <span style="font-size:11px;font-weight:700;color:var(--terracotta);text-transform:uppercase;letter-spacing:0.10em;margin-left:8px;">Tax Exempt</span></td>
+            <td class="amount">$0.00</td>
+          </tr>
+          <tr class="total"><td colspan="3"><span class="label">Furniture &amp; AV Total</span>Casa Luz × Cocoon</td><td class="amount">$3,835</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:16px;font-size:13px;color:var(--ink-mute);">All items reserved and held for your event dates. Tax exempt per your organization's certificate on file.</p>
+  </div>
 </section>
 
 <!-- ═══════════════════════════════════════════
@@ -1123,19 +1191,514 @@
 <div class="callout">
   <div class="inner">
     <div class="superhead" style="margin-bottom:20px;">Catering</div>
-    <h2 class="title" style="font-size:clamp(36px,5vw,72px);">Five directions.<br>Three quotes in hand.</h2>
-    <p class="lede" style="margin-top:24px;max-width:640px;">We've reached out to five vetted caterers — all briefed on your dietary requirements, the 3-day schedule, and Casa Luz's setup. Two full proposals are ready to review below; three more are incoming. All-in pricing includes food, staffing, delivery, disposables, and NY tax.</p>
+    <h2 class="title" style="font-size:clamp(36px,5vw,72px);">You've chosen<br>Caterer B.</h2>
+    <p class="lede" style="margin-top:24px;max-width:640px;">Confirmed selection: Mediterranean &amp; Plant-Forward. Menus finalized for July 7–9 at Casa Luz. All pricing below reflects your tax-exempt status — no sales tax applied. Other caterer options are preserved below for reference.</p>
   </div>
 </div>
 
+<section>
+  <div class="superhead" style="margin-bottom:8px;color:var(--terracotta);">Confirmed · Caterer B</div>
+  <h2 class="headline">Mediterranean &amp; plant-forward — your confirmed catering choice.</h2>
+
+  <!-- ── CATERER B ── -->
+  <div style="margin-top:80px;padding-top:80px;border-top:2px solid var(--ink);">
+    <div class="option-header">
+      <div class="option-num">B</div>
+      <div>
+        <div class="option-tag">Caterer B · Mediterranean &amp; Plant-Forward</div>
+        <h3 class="option-title">Abundant, seasonal buffets rooted in the Mediterranean.</h3>
+      </div>
+    </div>
+
+    <!-- Photo grid -->
+    <div class="photo-grid three" style="margin-top:0;">
+      <div class="photo">
+        <img src="https://cdn.sanity.io/images/vmq90ixo/production/6d53daa56382dac59ba8cf42d84d767ceb00d7b3-3024x4032.jpg?rect=130,842,2157,2696&w=800&h=600&fm=webp&q=85&fit=crop" alt="Breakfast buffet — Caterer B" />
+      </div>
+      <div class="photo">
+        <img src="https://cdn.sanity.io/images/vmq90ixo/production/74417128dc3f0d63c5be043eae7d6f83e0023a5d-3822x5726.jpg?rect=0,315,3822,3500&w=800&h=600&fm=webp&q=85&fit=crop" alt="Dinner spread — Caterer B" />
+      </div>
+      <div class="photo">
+        <img src="https://cdn.sanity.io/images/vmq90ixo/production/54c37a44c7bec204df7dab0fb311af4d001f2275-6023x9034.jpg?rect=164,1505,5859,4400&w=800&h=600&fm=webp&q=85&fit=crop" alt="Hors d'oeuvres — Caterer B" />
+      </div>
+    </div>
+
+    <!-- Two-col description -->
+    <div class="two-col" style="margin-top:40px;gap:clamp(32px,5vw,80px);">
+      <div>
+        <div class="eyebrow">The Direction</div>
+        <p style="font-size:17px;line-height:1.65;color:var(--ink-soft);">Brooklyn-based Mediterranean specialists known for generous, seasonal buffets. Their menus draw from American, Italian, Mediterranean, and Asian traditions — plant-forward and gluten-free options at every service.</p>
+        <p style="font-size:17px;line-height:1.65;color:var(--ink-soft);">Day 1 features a welcome dinner. Day 2 is a full-day program with breakfast, lunch, and dinner. Day 3 includes breakfast and lunch — venue closes at 5 PM, no dinner service. Menus confirmed and listed below.</p>
+      </div>
+      <div>
+        <div class="eyebrow">What's Included</div>
+        <ul style="list-style:none;padding:0;margin:0;display:grid;gap:0;">
+          <li style="padding:13px 0;border-bottom:1px solid var(--rule);font-size:15px;">☑ Afternoon coffee break (Day 1)</li>
+          <li style="padding:13px 0;border-bottom:1px solid var(--rule);font-size:15px;">☑ N/A beverages all day (Days 2 & 3)</li>
+          <li style="padding:13px 0;border-bottom:1px solid var(--rule);font-size:15px;">☑ Breakfast buffet (Days 2 & 3)</li>
+          <li style="padding:13px 0;border-bottom:1px solid var(--rule);font-size:15px;">☑ Lunch buffet (Days 2 & 3)</li>
+          <li style="padding:13px 0;border-bottom:1px solid var(--rule);font-size:15px;">☑ Dinner buffet (Days 1, 2 & 3)</li>
+          <li style="padding:13px 0;border-bottom:1px solid var(--rule);font-size:15px;">☑ Beer & wine package (Days 1, 2 & 3)</li>
+          <li style="padding:13px 0;border-bottom:1px solid var(--rule);font-size:15px;">☑ On-site captain (all 3 days)</li>
+          <li style="padding:13px 0;border-bottom:1px solid var(--rule);font-size:15px;">☑ Eco-friendly biodegradable disposables</li>
+          <li style="padding:13px 0;font-size:15px;">☑ 3 deliveries to Casa Luz</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Confirmed menus from L&O PDF -->
+    <div style="margin-top:48px;padding-top:48px;border-top:1px solid var(--rule);">
+      <div class="eyebrow">Confirmed 3-Day Menu</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--rule);margin-top:20px;">
+
+        <div style="background:var(--cream);padding:28px 24px;">
+          <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.16em;font-weight:700;color:var(--terracotta);margin-bottom:14px;">Tuesday · Day 1</div>
+          <div style="font-size:13px;color:var(--ink-soft);line-height:1.9;">
+            <strong style="color:var(--ink);display:block;margin-bottom:6px;">Dinner Buffet</strong>
+            <span style="font-size:11px;text-transform:uppercase;letter-spacing:.10em;color:var(--ink-mute);display:block;margin-bottom:3px;">Salads</span>
+            Fresh Spinach &amp; Strawberry Salad <em style="font-size:11px;">(v, gf, df)</em><br>
+            Baby Gem Lettuce &amp; Dill Salad <em style="font-size:11px;">(vg, gf)</em><br><br>
+            <span style="font-size:11px;text-transform:uppercase;letter-spacing:.10em;color:var(--ink-mute);display:block;margin-bottom:3px;">Entrees</span>
+            Grilled Bavette Steak, chimichurri <em style="font-size:11px;">(gf, df)</em><br>
+            Cayenne Shrimp <em style="font-size:11px;">(gf, df)</em><br>
+            Mushroom Balls <em style="font-size:11px;">(v, vg, gf)</em><br><br>
+            <span style="font-size:11px;text-transform:uppercase;letter-spacing:.10em;color:var(--ink-mute);display:block;margin-bottom:3px;">Sides</span>
+            Roasted Fingerling Potatoes · Grilled Zucchini &amp; Squash · Grilled Asparagus <em style="font-size:11px;">(v, gf)</em><br><br>
+            <span style="font-size:11px;text-transform:uppercase;letter-spacing:.10em;color:var(--ink-mute);display:block;margin-bottom:3px;">Dessert</span>
+            Banana Pudding <em style="font-size:11px;">(vg, nf)</em>
+          </div>
+        </div>
+
+        <div style="background:var(--cream);padding:28px 24px;">
+          <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.16em;font-weight:700;color:var(--terracotta);margin-bottom:14px;">Wednesday · Day 2</div>
+          <div style="font-size:13px;color:var(--ink-soft);line-height:1.9;">
+            <strong style="color:var(--ink);display:block;margin-bottom:6px;">Breakfast</strong>
+            Organic Fruit Salad · Overnight Vanilla Oats w/ chia &amp; mango <em style="font-size:11px;">(v, gf)</em><br>
+            Free Range Scrambled Eggs · Roasted Potato Hashbrowns <em style="font-size:11px;">(vg, gf)</em><br>
+            Crispy Bacon <em style="font-size:11px;">(gf, df)</em> · Vegan California Burrito w/ Chipotle Aioli <em style="font-size:11px;">(v)</em><br>
+            Olive Oil Coffee Cake <em style="font-size:11px;">(vg, nf)</em><br><br>
+            <strong style="color:var(--ink);display:block;margin-bottom:6px;">Lunch</strong>
+            Panzanella Salad · Tricolore Salad <em style="font-size:11px;">(v, df)</em><br>
+            Chicken Milanese · L&amp;O Meatballs <em style="font-size:11px;">(gf, df)</em> · Tofu Milanese <em style="font-size:11px;">(v, gf)</em><br>
+            Toasted Fusilli Pasta · Tuscan Kale &amp; Mushrooms · Roasted Cauliflower <em style="font-size:11px;">(v, gf)</em><br>
+            Tiramisu <em style="font-size:11px;">(vg, nf)</em><br><br>
+            <strong style="color:var(--ink);display:block;margin-bottom:6px;">Dinner</strong>
+            Hakusai Cabbage Salad · Persian Cucumber &amp; Tomato Salad <em style="font-size:11px;">(v, gf)</em><br>
+            Teriyaki Chicken · Alaskan Wild Miso Cod <em style="font-size:11px;">(gf, df)</em> · Teriyaki Tofu <em style="font-size:11px;">(v, gf)</em><br>
+            Sesame Rice Noodles · Roasted Sweet Potatoes · Haricot Verts <em style="font-size:11px;">(v, gf)</em><br>
+            Japanese Cheesecake <em style="font-size:11px;">(vg, nf)</em>
+          </div>
+        </div>
+
+        <div style="background:var(--cream);padding:28px 24px;">
+          <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.16em;font-weight:700;color:var(--terracotta);margin-bottom:14px;">Thursday · Day 3</div>
+          <div style="font-size:13px;color:var(--ink-soft);line-height:1.9;">
+            <strong style="color:var(--ink);display:block;margin-bottom:6px;">Breakfast</strong>
+            Organic Fruit Salad · Chocolate Chia Porridge w/ raspberries <em style="font-size:11px;">(v, gf)</em><br>
+            Farm Eggs, Goat Cheese &amp; Tomato Frittata <em style="font-size:11px;">(vg, gf)</em><br>
+            Homemade Biscuits <em style="font-size:11px;">(vg)</em> · Chicken Sausage <em style="font-size:11px;">(gf, df)</em><br>
+            Avocado Toast on Torpedo Sourdough <em style="font-size:11px;">(v, df)</em><br>
+            Homemade Seasonal Muffins <em style="font-size:11px;">(vg, nf)</em><br><br>
+            <strong style="color:var(--ink);display:block;margin-bottom:6px;">Lunch</strong>
+            Cucumber, Yogurt &amp; Dill Salad · Prasini Salad <em style="font-size:11px;">(v, gf)</em><br>
+            Roasted L&amp;O Chicken <em style="font-size:11px;">(gf, df)</em><br>
+            Everything Bagel Crusted Salmon <em style="font-size:11px;">(gf, df)</em><br>
+            Green Pea &amp; Mint Falafel w/ coconut tzatziki <em style="font-size:11px;">(v, gf)</em><br>
+            Spring Quinoa · Poached Haricots Verts · Roasted Rainbow Carrots <em style="font-size:11px;">(v, gf)</em><br>
+            Baklava <em style="font-size:11px;">(vg)</em><br><br>
+            <div style="padding:10px 14px;background:rgba(245,64,41,0.08);border-left:3px solid var(--terracotta);font-size:12px;color:var(--terracotta);font-weight:600;line-height:1.5;">
+              No dinner service · Retreat closes 5 PM
+            </div>
+          </div>
+        </div>
+      </div>
+      <p style="margin-top:14px;font-size:12px;color:var(--ink-mute);">Menus confirmed. v = vegan · vg = vegetarian · gf = gluten-free · df = dairy-free · nf = nut-free. Dietary accommodations built in as standard.</p>
+    </div>
+
+    <!-- Pricing breakdown -->
+    <div class="breakdown" style="margin-top:40px;">
+      <table>
+        <thead>
+          <tr>
+            <th>Line Item</th>
+            <th class="qty">Qty</th>
+            <th class="amount">Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="section-head"><td colspan="3">Day 1 — Tuesday, July 7</td></tr>
+          <tr>
+            <td>Afternoon coffee break<span class="note" style="display:block;">14 guests</span></td>
+            <td class="qty">14</td>
+            <td class="amount">$294</td>
+          </tr>
+          <tr>
+            <td>Welcome dinner buffet<span class="note" style="display:block;">14 guests</span></td>
+            <td class="qty">14</td>
+            <td class="amount">$1,092</td>
+          </tr>
+          <tr>
+            <td>N/A + beer &amp; wine beverage package (2 hrs)<span class="note" style="display:block;">14 guests</span></td>
+            <td class="qty">14</td>
+            <td class="amount">$924</td>
+          </tr>
+          <tr>
+            <td>Captain &amp; service staff<span class="note" style="display:block;">7 hours</span></td>
+            <td class="qty">1</td>
+            <td class="amount">$672</td>
+          </tr>
+          <tr>
+            <td>Per-job service minimum</td>
+            <td class="qty">1</td>
+            <td class="amount">$1,290</td>
+          </tr>
+          <tr class="section-head"><td colspan="3">Day 2 — Wednesday, July 8</td></tr>
+          <tr>
+            <td>Breakfast buffet<span class="note" style="display:block;">14 guests</span></td>
+            <td class="qty">14</td>
+            <td class="amount">$504</td>
+          </tr>
+          <tr>
+            <td>N/A beverages all day (8:30 AM – 3:30 PM)<span class="note" style="display:block;">14 guests</span></td>
+            <td class="qty">14</td>
+            <td class="amount">$588</td>
+          </tr>
+          <tr>
+            <td>Lunch buffet<span class="note" style="display:block;">14 guests</span></td>
+            <td class="qty">14</td>
+            <td class="amount">$756</td>
+          </tr>
+          <tr>
+            <td>Dinner buffet<span class="note" style="display:block;">14 guests</span></td>
+            <td class="qty">14</td>
+            <td class="amount">$1,092</td>
+          </tr>
+          <tr>
+            <td>N/A + beer &amp; wine beverage package (2 hrs)<span class="note" style="display:block;">14 guests</span></td>
+            <td class="qty">14</td>
+            <td class="amount">$924</td>
+          </tr>
+          <tr>
+            <td>Captain &amp; service staff<span class="note" style="display:block;">14 hours</span></td>
+            <td class="qty">1</td>
+            <td class="amount">$1,344</td>
+          </tr>
+          <tr class="section-head"><td colspan="3">Day 3 — Thursday, July 9</td></tr>
+          <tr>
+            <td>Breakfast buffet<span class="note" style="display:block;">14 guests</span></td>
+            <td class="qty">14</td>
+            <td class="amount">$504</td>
+          </tr>
+          <tr>
+            <td>N/A beverages all day (8:30 AM – 3:30 PM)<span class="note" style="display:block;">14 guests</span></td>
+            <td class="qty">14</td>
+            <td class="amount">$588</td>
+          </tr>
+          <tr>
+            <td>Lunch buffet<span class="note" style="display:block;">14 guests</span></td>
+            <td class="qty">14</td>
+            <td class="amount">$756</td>
+          </tr>
+          <tr>
+            <td>Captain &amp; service staff<span class="note" style="display:block;">9 hours</span></td>
+            <td class="qty">1</td>
+            <td class="amount">$864</td>
+          </tr>
+          <tr class="section-head"><td colspan="3">Equipment &amp; Logistics</td></tr>
+          <tr>
+            <td>Eco-friendly biodegradable disposables<span class="note" style="display:block;">Plates, cups, cutlery &amp; napkins — all 3 days</span></td>
+            <td class="qty">1</td>
+            <td class="amount">$1,500</td>
+          </tr>
+          <tr>
+            <td>Transportation &amp; delivery<span class="note" style="display:block;">3 separate deliveries to Casa Luz</span></td>
+            <td class="qty">3</td>
+            <td class="amount">$1,260</td>
+          </tr>
+          <tr>
+            <td>Admin &amp; logistics fee (10%)</td>
+            <td class="qty">1</td>
+            <td class="amount">$1,495.20</td>
+          </tr>
+          <tr class="subtotal">
+            <td colspan="2">Subtotal</td>
+            <td class="amount">$16,447.20</td>
+          </tr>
+          <tr class="subtle">
+            <td colspan="2">NY State Sales Tax <span style="font-size:11px;font-weight:700;color:var(--terracotta);text-transform:uppercase;letter-spacing:0.10em;margin-left:8px;">Tax Exempt</span></td>
+            <td class="amount">$0.00</td>
+          </tr>
+          <tr class="total">
+            <td colspan="2"><span class="label">All-In Total</span>Caterer B · 3-Day Program</td>
+            <td class="amount">$16,447.20</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div><!-- /Caterer B -->
+
+  <!-- ═══════════════════════════════════════════
+     CATERING AT-A-GLANCE
+═══════════════════════════════════════════ -->
+<section class="tight" style="background:var(--cream-deep);max-width:none;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);">
+  <div style="max-width:var(--max);margin:0 auto;padding:0 clamp(24px,5vw,80px);">
+    <div class="superhead" style="margin-bottom:12px;">Catering at a Glance</div>
+    <h2 class="headline">Side by side.</h2>
+    <div class="walk-grid" style="margin-top:32px;">
+      <div class="walk">
+        <div class="w-label">Caterer A · Seasonal American</div>
+        <div class="w-title">Chef-driven, full-service</div>
+        <div class="w-total">$16,853.85</div>
+        <div class="w-note">All-in · 3 days · 14–15 guests<br>Food, staffing, delivery, tax included</div>
+        <div style="margin-top:20px;padding-top:20px;border-top:1px solid var(--rule);font-size:13px;color:var(--ink-soft);line-height:1.8;">
+          Day 1: Dinner + bar only<br>
+          Days 2–3: Full day (bkfst → dinner + bar)<br>
+          Eco compostables · On-site team<br>
+          Customizable menus
+        </div>
+      </div>
+      <div class="walk" style="border:2px solid var(--terracotta);position:relative;">
+        <div style="position:absolute;top:-14px;left:20px;background:var(--terracotta);color:#fff;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.14em;padding:3px 10px;">Selected</div>
+        <div class="w-label">Caterer B · Mediterranean &amp; Plant-Forward</div>
+        <div class="w-title">Seasonal, abundant buffets</div>
+        <div class="w-total">$16,447.20</div>
+        <div class="w-note">All-in · 3 days · 14 guests<br>Food, staffing, delivery · Tax exempt</div>
+        <div style="margin-top:20px;padding-top:20px;border-top:1px solid var(--rule);font-size:13px;color:var(--ink-soft);line-height:1.8;">
+          Day 1: Welcome dinner + bar<br>
+          Day 2: Full day (bkfst → dinner + bar)<br>
+          Day 3: Breakfast + lunch only<br>
+          Biodegradable disposables · 3 deliveries
+        </div>
+      </div>
+      <div class="walk">
+        <div class="w-label">Caterer C · Seasonal &amp; Plant-Forward</div>
+        <div class="w-title">Farm-to-table drop-off</div>
+        <div class="w-total">$8,112.43</div>
+        <div class="w-note">All-in · 3 days · 15 guests<br>Food, delivery, disposables, admin fee &amp; tax included</div>
+        <div style="margin-top:20px;padding-top:20px;border-top:1px solid var(--rule);font-size:13px;color:var(--ink-soft);line-height:1.8;">
+          Day 1: Afternoon break + welcome dinner<br>
+          Days 2–3: Full day (bkfst → dinner)<br>
+          Drop-off only · No on-site staff<br>
+          Compostable eco-friendly packaging
+        </div>
+      </div>
+            <div class="walk" style="background:var(--cream-warm);">
+        <div class="w-label" style="color:var(--ink-soft);">What to Consider</div>
+        <div class="w-title">Choosing your direction</div>
+        <div style="margin-top:20px;font-size:14px;color:var(--ink-soft);line-height:1.8;">
+          <strong style="color:var(--ink);display:block;margin-bottom:6px;">Choose A if:</strong>
+          You want maximum flexibility, a curated American menu, and a single team handling everything end-to-end.<br><br>
+          <strong style="color:var(--ink);display:block;margin-bottom:6px;">Choose B if:</strong>
+          You want Mediterranean flavors, abundant plant-forward options, and a Brooklyn-rooted team with a rotating seasonal menu.<br><br><strong style="color:var(--ink);display:block;margin-bottom:6px;">Choose C if:</strong>You want beautiful, seasonal food at the lowest all-in cost. Best fit if your team can self-manage meal setup and wants budget focused on the retreat itself.
+        </div>
+      </div>
+    </div>
+    <p style="margin-top:20px;font-size:13px;color:var(--ink-mute);">All prices are all-in and include Cocoon's concierge and coordination fee. Deposits and final headcount adjustments confirmed upon booking.</p>
+  </div>
+</section>
+
+
+
 <!-- ═══════════════════════════════════════════
-     CATERER A — SEASONAL AMERICAN
+     EQUIPMENT RENTALS
 ═══════════════════════════════════════════ -->
 <section>
-  <div class="superhead" style="margin-bottom:8px;">Catering Options</div>
-  <h2 class="headline">Chef-driven cooking<br>for every moment of the retreat.</h2>
+  <div class="superhead" style="margin-bottom:8px;">Equipment Rentals</div>
+  <h2 class="headline">Tables, Chairs &amp; Linen.</h2>
+  <p class="body" style="color:var(--ink-soft);max-width:640px;">3-day rental — delivery July 7 (9–11 AM), pickup July 9 (6 PM). All pricing below reflects your tax-exempt status.</p>
 
-  <!-- ── CATERER A ── -->
+  <!-- Product images grid -->
+  <div class="photo-grid three" style="margin-top:32px;">
+
+    <!-- TILE 1: Oslo White Chair — actual product catalog photo -->
+    <div class="photo" style="overflow:hidden;background:#fff;position:relative;min-height:280px;display:flex;flex-direction:column;">
+      <div style="flex:1;display:flex;align-items:center;justify-content:center;padding:28px 20px 12px;">
+        <img src="https://broadwaypartyrentals.com/cms/uploads/images/products/prod_image_2362.jpg"
+             alt="Oslo White Chair"
+             style="max-width:100%;max-height:200px;object-fit:contain;display:block;">
+      </div>
+      <div style="background:var(--ink);padding:14px 16px;">
+        <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.12em;font-weight:700;color:#fff;">Oslo White Chair</div>
+        <div style="font-size:11px;color:rgba(255,255,255,0.65);margin-top:3px;">Specialty · 14 chairs</div>
+      </div>
+    </div>
+
+    <!-- TILE 2: Black Linen — BPR product photo (no-www to allow hotlink) -->
+    <div class="photo" style="overflow:hidden;background:var(--cream-deep);position:relative;min-height:280px;">
+      <img src="https://broadwaypartyrentals.com/cms/uploads/images/products/prod_linen_image_505.jpg"
+           alt="Black Polycloth Linen 90x132"
+           style="width:100%;height:100%;object-fit:cover;display:block;">
+      <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.65));padding:16px;color:#fff;">
+        <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.12em;font-weight:700;">Black Cloth Linen</div>
+        <div style="font-size:11px;opacity:0.7;margin-top:3px;">90×132 · 3 linens</div>
+      </div>
+    </div>
+
+    <!-- TILE 3: 6'×18" Banquet Table — styled spec illustration on dark background -->
+    <div class="photo" style="overflow:hidden;background:var(--ink);position:relative;min-height:280px;display:flex;flex-direction:column;">
+      <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px 20px 8px;gap:14px;">
+        <img src="https://broadwaypartyrentals.com/cms/uploads/images/products/prod_image_1171.jpg"
+             alt="6ft x 18in Banquet Table diagram"
+             style="max-width:100%;max-height:160px;object-fit:contain;display:block;opacity:0.92;">
+        <!-- Dimension specs -->
+        <div style="display:flex;gap:12px;align-items:center;">
+          <div style="text-align:center;">
+            <div style="font-size:16px;font-weight:700;color:#fff;letter-spacing:-0.01em;">72″</div>
+            <div style="font-size:9px;text-transform:uppercase;letter-spacing:0.1em;color:rgba(255,255,255,0.45);margin-top:2px;">Length</div>
+          </div>
+          <div style="color:rgba(255,255,255,0.2);font-size:18px;">×</div>
+          <div style="text-align:center;">
+            <div style="font-size:16px;font-weight:700;color:#fff;letter-spacing:-0.01em;">18″</div>
+            <div style="font-size:9px;text-transform:uppercase;letter-spacing:0.1em;color:rgba(255,255,255,0.45);margin-top:2px;">Width</div>
+          </div>
+          <div style="color:rgba(255,255,255,0.2);font-size:18px;">×</div>
+          <div style="text-align:center;">
+            <div style="font-size:16px;font-weight:700;color:#fff;letter-spacing:-0.01em;">30″</div>
+            <div style="font-size:9px;text-transform:uppercase;letter-spacing:0.1em;color:rgba(255,255,255,0.45);margin-top:2px;">Height</div>
+          </div>
+        </div>
+      </div>
+      <div style="background:rgba(255,255,255,0.08);border-top:1px solid rgba(255,255,255,0.12);padding:14px 16px;">
+        <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.12em;font-weight:700;color:#fff;">6′ × 18″ Banquet Table</div>
+        <div style="font-size:11px;color:rgba(255,255,255,0.55);margin-top:3px;">Classroom-style · 3 tables</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Pricing breakdown -->
+  <div class="breakdown" style="margin-top:40px;">
+    <table>
+      <thead>
+        <tr><th>Item</th><th class="qty">Qty</th><th class="amount">Unit</th><th class="amount">Total</th></tr>
+      </thead>
+      <tbody>
+        <tr class="section-head"><td colspan="4">Tables &amp; Seating</td></tr>
+        <tr>
+          <td>6′L × 18″W Banquet Table × 30″H<span class="note" style="display:block;">Delivery Jul 7 · Pickup Jul 9</span></td>
+          <td class="qty">3</td><td class="amount">$23.86</td><td class="amount">$71.57</td>
+        </tr>
+        <tr>
+          <td>Oslo White Chair<span class="note" style="display:block;">Specialty chair · 3-day rental</span></td>
+          <td class="qty">14</td><td class="amount">$18.20</td><td class="amount">$254.80</td>
+        </tr>
+        <tr class="section-head"><td colspan="4">Linen</td></tr>
+        <tr>
+          <td>Black 90×132 Cloth Linen<span class="note" style="display:block;">Fits 6′ banquet tables</span></td>
+          <td class="qty">3</td><td class="amount">$62.33</td><td class="amount">$187.00</td>
+        </tr>
+        <tr class="section-head"><td colspan="4">Delivery &amp; Logistics</td></tr>
+        <tr>
+          <td>Timed Delivery — 1–2 Hour Arrival Window (9AM–5PM)<span class="note" style="display:block;">Jul 7 · 9AM–11AM target window</span></td>
+          <td class="qty">1</td><td class="amount">$520.00</td><td class="amount">$520.00</td>
+        </tr>
+        <tr>
+          <td>Night Pickup After 5PM<span class="note" style="display:block;">Jul 9 · 6PM</span></td>
+          <td class="qty">1</td><td class="amount">$676.00</td><td class="amount">$676.00</td>
+        </tr>
+        <tr>
+          <td>Damage Waiver<span class="note" style="display:block;">3.5% of merchandise — covers normal wear</span></td>
+          <td class="qty">1</td><td class="amount">$17.97</td><td class="amount">$17.97</td>
+        </tr>
+        <tr class="subtotal"><td colspan="3">Subtotal</td><td class="amount">$1,727.34</td></tr>
+        <tr class="subtle">
+          <td colspan="3">NY State Sales Tax <span style="font-size:11px;font-weight:700;color:var(--terracotta);text-transform:uppercase;letter-spacing:0.10em;margin-left:8px;">Tax Exempt</span></td>
+          <td class="amount">$0.00</td>
+        </tr>
+        <tr class="total"><td colspan="3"><span class="label">All-In Total</span>Equipment Rentals · 3-Day Program</td><td class="amount">$1,727.34</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     F&B SERVICE WARE — SELECTION
+═══════════════════════════════════════════ -->
+<section>
+  <div class="superhead" style="margin-bottom:8px;">F&amp;B Service Ware · choose your look</div>
+  <h2 class="headline">Set the table.</h2>
+  <p class="body" style="color:var(--ink-soft);max-width:760px;">Browse the china, glassware, and flatware directions below. Note the <strong>reference number</strong> on anything you like in each category and reply — we'll pull a quote and finalise the exact counts. Rentals are coordinated and billed through Cocoon. Mix and match freely.</p>
+  <p class="body" style="font-size:14px;color:var(--ink-soft);max-width:760px;margin-top:8px;"><em>Note: the caterer's package already includes eco-friendly biodegradable disposables at no extra cost. Proper china is an upgrade — we'll price it once you've picked your style.</em></p>
+
+  <!-- China / Dinnerware -->
+  <div style="margin-top:52px;">
+    <div class="divider-label"><div class="text">China</div><div class="line"></div><div class="text">Pick one style</div></div>
+    <div class="photo-grid four">
+      <div class="product-card"><div class="photo"><img src="https://broadwaypartyrentals.com/cms/uploads/images/categories/cat478.jpg" alt="White Coupe" /></div><div class="meta"><div class="name">White Coupe</div><div class="desc">Clean classic white · <strong style="color:var(--terracotta)">Ref #478</strong></div></div></div>
+      <div class="product-card"><div class="photo"><img src="https://broadwaypartyrentals.com/cms/uploads/images/categories/cat644.jpg" alt="Aspen Matte White" /></div><div class="meta"><div class="name">Aspen Matte White</div><div class="desc">Modern matte · <strong style="color:var(--terracotta)">Ref #644</strong></div></div></div>
+      <div class="product-card"><div class="photo"><img src="https://broadwaypartyrentals.com/cms/uploads/images/categories/d470e31b0b909f10ee9a02dc3cfdd3bd.jpg" alt="Moda Black" /></div><div class="meta"><div class="name">Moda Black</div><div class="desc">Matte black, modern · <strong style="color:var(--terracotta)">Ref #732</strong></div></div></div>
+      <div class="product-card"><div class="photo"><img src="https://broadwaypartyrentals.com/cms/uploads/images/categories/72dbbd6704a6057892a907f8b310323e.jpg" alt="Moda Gold" /></div><div class="meta"><div class="name">Moda Gold</div><div class="desc">Gold-rim, modern · <strong style="color:var(--terracotta)">Ref #733</strong></div></div></div>
+      <div class="product-card"><div class="photo"><img src="https://broadwaypartyrentals.com/cms/uploads/images/categories/8c088e88c58601276b35b8c2dfe31143.jpg" alt="Scalloped Gold" /></div><div class="meta"><div class="name">Scalloped Gold</div><div class="desc">Ornate scalloped edge · <strong style="color:var(--terracotta)">Ref #735</strong></div></div></div>
+      <div class="product-card"><div class="photo"><img src="https://broadwaypartyrentals.com/cms/uploads/images/categories/cat468.jpg" alt="Gold Band Ivory" /></div><div class="meta"><div class="name">Gold Band Ivory</div><div class="desc">Classic ivory + gold band · <strong style="color:var(--terracotta)">Ref #468</strong></div></div></div>
+      <div class="product-card"><div class="photo"><img src="https://broadwaypartyrentals.com/cms/uploads/images/categories/33d10e17743982e64b888000c18a3d4f.png" alt="Amelia Emerald" /></div><div class="meta"><div class="name">Amelia Emerald</div><div class="desc">Emerald colour, glass · <strong style="color:var(--terracotta)">Ref #754</strong></div></div></div>
+      <div class="product-card"><div class="photo"><img src="https://broadwaypartyrentals.com/cms/uploads/images/categories/dc921f30a3bb6eefd9f76163b973f159.jpg" alt="Textured Amber Glass" /></div><div class="meta"><div class="name">Textured Amber Glass</div><div class="desc">Warm amber, textured · <strong style="color:var(--terracotta)">Ref #679</strong></div></div></div>
+    </div>
+  </div>
+
+  <!-- Glassware -->
+  <div style="margin-top:56px;">
+    <div class="divider-label"><div class="text">Glassware</div><div class="line"></div><div class="text">Pick a stem</div></div>
+    <div class="photo-grid four">
+      <div class="product-card"><div class="photo"><img src="https://broadwaypartyrentals.com/cms/uploads/images/categories/adff7d635bad49f88d298d21814c2812.jpg" alt="Vista" /></div><div class="meta"><div class="name">Vista</div><div class="desc">Editorial slim crystal · <strong style="color:var(--terracotta)">Ref #709</strong></div></div></div>
+      <div class="product-card"><div class="photo"><img src="https://broadwaypartyrentals.com/cms/uploads/images/categories/5b275ff48dcbd77805497cb2e9f69592.jpg" alt="Colette" /></div><div class="meta"><div class="name">Colette</div><div class="desc">Fine contemporary · <strong style="color:var(--terracotta)">Ref #744</strong></div></div></div>
+      <div class="product-card"><div class="photo"><img src="https://broadwaypartyrentals.com/cms/uploads/images/categories/e027a0451b91262475f30c36f603c02a.jpg" alt="French Bistro" /></div><div class="meta"><div class="name">French Bistro</div><div class="desc">Relaxed, characterful · <strong style="color:var(--terracotta)">Ref #664</strong></div></div></div>
+      <div class="product-card"><div class="photo"><img src="https://broadwaypartyrentals.com/cms/uploads/images/categories/cat540.jpg" alt="Bell Gold" /></div><div class="meta"><div class="name">Bell Gold</div><div class="desc">Gold-rim bell · <strong style="color:var(--terracotta)">Ref #540</strong></div></div></div>
+      <div class="product-card"><div class="photo"><img src="https://broadwaypartyrentals.com/cms/uploads/images/categories/66d5f0e125dfa46917d06b8a3829cd13.jpg" alt="Stemless" /></div><div class="meta"><div class="name">Stemless</div><div class="desc">Modern, casual · <strong style="color:var(--terracotta)">Ref #658</strong></div></div></div>
+      <div class="product-card"><div class="photo"><img src="https://broadwaypartyrentals.com/cms/uploads/images/categories/0ce4839254a97f16f8e7ff7732bf91d4.jpg" alt="Riedel" /></div><div class="meta"><div class="name">Riedel</div><div class="desc">Premium, fine-stem · <strong style="color:var(--terracotta)">Ref #653</strong></div></div></div>
+    </div>
+  </div>
+
+  <!-- Flatware / Tableware -->
+  <div style="margin-top:56px;">
+    <div class="divider-label"><div class="text">Tableware</div><div class="line"></div><div class="text">Pick a finish</div></div>
+    <div class="photo-grid four">
+      <div class="product-card"><div class="photo"><img src="https://broadwaypartyrentals.com/cms/uploads/images/categories/652dcb4a0ea6ddd72891d2ad119ba1b6.jpg" alt="Laurence Matte Gold" /></div><div class="meta"><div class="name">Laurence Matte Gold</div><div class="desc">Matte gold · <strong style="color:var(--terracotta)">Ref #741</strong></div></div></div>
+      <div class="product-card"><div class="photo"><img src="https://broadwaypartyrentals.com/cms/uploads/images/categories/cat661.jpg" alt="Laurence Matte Copper" /></div><div class="meta"><div class="name">Laurence Matte Copper</div><div class="desc">Warm copper · <strong style="color:var(--terracotta)">Ref #661</strong></div></div></div>
+      <div class="product-card"><div class="photo"><img src="https://broadwaypartyrentals.com/cms/uploads/images/categories/a1b1517fbb51f68926fa8e30cd626ac7.jpg" alt="Laurence Silver" /></div><div class="meta"><div class="name">Laurence Silver</div><div class="desc">Classic polished · <strong style="color:var(--terracotta)">Ref #687</strong></div></div></div>
+      <div class="product-card"><div class="photo"><img src="https://broadwaypartyrentals.com/cms/uploads/images/categories/969264056d59f5f1a07e7875a5352b54.jpg" alt="Blackwood" /></div><div class="meta"><div class="name">Blackwood</div><div class="desc">Black handle · <strong style="color:var(--terracotta)">Ref #700</strong></div></div></div>
+      <div class="product-card"><div class="photo"><img src="https://broadwaypartyrentals.com/cms/uploads/images/categories/d232621df6c01f67f9509b6aa04f95a9.jpg" alt="Teakwood" /></div><div class="meta"><div class="name">Teakwood</div><div class="desc">Warm wood handle · <strong style="color:var(--terracotta)">Ref #699</strong></div></div></div>
+      <div class="product-card"><div class="photo"><img src="https://broadwaypartyrentals.com/cms/uploads/images/categories/cat495.jpg" alt="Hammered" /></div><div class="meta"><div class="name">Hammered</div><div class="desc">Textured artisan · <strong style="color:var(--terracotta)">Ref #495</strong></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     NEXT STEPS
+═══════════════════════════════════════════ -->
+<div class="callout ink">
+  <div class="inner">
+    <div class="superhead" style="margin-bottom:20px;color:rgba(255,255,255,0.6);">Next Steps</div>
+    <h2 class="title" style="font-size:clamp(36px,5vw,72px);">Two things<br>still open.</h2>
+    <div class="decisions">
+      <div class="decision">
+        <div class="d-num">01</div>
+        <div class="d-title">F&amp;B Service Ware Decision</div>
+        <div class="d-body">Proper china, glass &amp; flatware, or biodegradable disposables (already included in catering)? Also: 1–2 extra dining tables + linens may be needed depending on your seating setup. Let us know and we'll finalize the rental order.</div>
+      </div>
+      <div class="decision">
+        <div class="d-num">02</div>
+        <div class="d-title">Sign Off &amp; Confirm</div>
+        <div class="d-body">Catering (B), furniture, AV, and base equipment rentals are locked. Once the F&amp;B ware question is answered, we'll send the final invoice for deposit and get everything confirmed with vendors.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     ARCHIVED CATERING OPTIONS (for reference)
+═══════════════════════════════════════════ -->
+<section class="tight" style="background:#1A1A1A;max-width:none;padding-top:80px;padding-bottom:80px;">
+  <div style="max-width:var(--max);margin:0 auto;padding:0 clamp(24px,5vw,80px);">
+    <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.16em;font-weight:700;color:rgba(255,255,255,0.4);margin-bottom:12px;">Reference Only</div>
+    <h2 style="font-size:clamp(28px,4vw,48px);font-weight:700;color:#fff;line-height:1.1;margin:0 0 16px;">Other catering options<br>considered.</h2>
+    <p style="font-size:16px;color:rgba(255,255,255,0.6);max-width:560px;line-height:1.7;margin:0;">You've selected Caterer B. The proposals below are preserved for reference — pricing, menus, and comparisons.</p>
+  </div>
+</section>
+
+<div style="background:var(--cream-deep);padding:0;">
+
+<!-- ── CATERER A ── -->
   <div style="margin-top:48px;">
     <div class="option-header">
       <div class="option-num">A</div>
@@ -1290,215 +1853,9 @@
     </div>
   </div><!-- /Caterer A -->
 
-  <!-- ── CATERER B ── -->
-  <div style="margin-top:80px;padding-top:80px;border-top:2px solid var(--ink);">
-    <div class="option-header">
-      <div class="option-num">B</div>
-      <div>
-        <div class="option-tag">Caterer B · Mediterranean &amp; Plant-Forward</div>
-        <h3 class="option-title">Abundant, seasonal buffets rooted in the Mediterranean.</h3>
-      </div>
-    </div>
+  
 
-    <!-- Photo grid -->
-    <div class="photo-grid three" style="margin-top:0;">
-      <div class="photo">
-        <img src="https://cdn.sanity.io/images/vmq90ixo/production/6d53daa56382dac59ba8cf42d84d767ceb00d7b3-3024x4032.jpg?rect=130,842,2157,2696&w=800&h=600&fm=webp&q=85&fit=crop" alt="Breakfast buffet — Caterer B" />
-      </div>
-      <div class="photo">
-        <img src="https://cdn.sanity.io/images/vmq90ixo/production/74417128dc3f0d63c5be043eae7d6f83e0023a5d-3822x5726.jpg?rect=0,315,3822,3500&w=800&h=600&fm=webp&q=85&fit=crop" alt="Dinner spread — Caterer B" />
-      </div>
-      <div class="photo">
-        <img src="https://cdn.sanity.io/images/vmq90ixo/production/54c37a44c7bec204df7dab0fb311af4d001f2275-6023x9034.jpg?rect=164,1505,5859,4400&w=800&h=600&fm=webp&q=85&fit=crop" alt="Hors d'oeuvres — Caterer B" />
-      </div>
-    </div>
-
-    <!-- Two-col description -->
-    <div class="two-col" style="margin-top:40px;gap:clamp(32px,5vw,80px);">
-      <div>
-        <div class="eyebrow">The Direction</div>
-        <p style="font-size:17px;line-height:1.65;color:var(--ink-soft);">Brooklyn-based Mediterranean specialists known for generous, seasonal buffets full of vibrancy and flavor. Their menus rotate weekly and draw from Greek, Italian, and Middle Eastern traditions — always with strong plant-forward and gluten-free options alongside proteins.</p>
-        <p style="font-size:17px;line-height:1.65;color:var(--ink-soft);">Day 1 includes an afternoon coffee break and a welcome dinner. Days 2 and 3 are full-day programs with breakfast through dinner. They hold a full liquor license and handle all beverage service in-house.</p>
-      </div>
-      <div>
-        <div class="eyebrow">What's Included</div>
-        <ul style="list-style:none;padding:0;margin:0;display:grid;gap:0;">
-          <li style="padding:13px 0;border-bottom:1px solid var(--rule);font-size:15px;">☑ Afternoon coffee break (Day 1)</li>
-          <li style="padding:13px 0;border-bottom:1px solid var(--rule);font-size:15px;">☑ N/A beverages all day (Days 2 & 3)</li>
-          <li style="padding:13px 0;border-bottom:1px solid var(--rule);font-size:15px;">☑ Breakfast buffet (Days 2 & 3)</li>
-          <li style="padding:13px 0;border-bottom:1px solid var(--rule);font-size:15px;">☑ Lunch buffet (Days 2 & 3)</li>
-          <li style="padding:13px 0;border-bottom:1px solid var(--rule);font-size:15px;">☑ Dinner buffet (Days 1, 2 & 3)</li>
-          <li style="padding:13px 0;border-bottom:1px solid var(--rule);font-size:15px;">☑ Beer & wine package (Days 1, 2 & 3)</li>
-          <li style="padding:13px 0;border-bottom:1px solid var(--rule);font-size:15px;">☑ On-site captain (all 3 days)</li>
-          <li style="padding:13px 0;border-bottom:1px solid var(--rule);font-size:15px;">☑ Eco-friendly biodegradable disposables</li>
-          <li style="padding:13px 0;font-size:15px;">☑ 3 deliveries to Casa Luz</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Sample menu -->
-    <div style="margin-top:48px;padding-top:48px;border-top:1px solid var(--rule);">
-      <div class="eyebrow">Sample 3-Day Menu Program</div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--rule);margin-top:20px;">
-        <div style="background:var(--cream);padding:28px 24px;">
-          <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.16em;font-weight:700;color:var(--terracotta);margin-bottom:14px;">Tuesday · Day 1</div>
-          <div style="font-size:13px;color:var(--ink-soft);line-height:1.9;">
-            <strong style="color:var(--ink);display:block;margin-bottom:4px;">Afternoon Break</strong>
-            Coffee, tea, seasonal pastries<br><br>
-            <strong style="color:var(--ink);display:block;margin-bottom:4px;">Welcome Dinner Buffet</strong>
-            Shakshuka with feta, grilled chicken thighs, falafel &amp; tahini, roasted seasonal vegetables, mezze spreads, fresh pita<br><br>
-            <strong style="color:var(--ink);display:block;margin-bottom:4px;">Bar</strong>
-            N/A + curated wine &amp; beer, 2 hours
-          </div>
-        </div>
-        <div style="background:var(--cream);padding:28px 24px;">
-          <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.16em;font-weight:700;color:var(--terracotta);margin-bottom:14px;">Wednesday · Day 2</div>
-          <div style="font-size:13px;color:var(--ink-soft);line-height:1.9;">
-            <strong style="color:var(--ink);display:block;margin-bottom:4px;">Breakfast</strong>
-            Frittata, bagel sandwiches, smoothie bowls, seasonal fruit &amp; pastries<br><br>
-            <strong style="color:var(--ink);display:block;margin-bottom:4px;">Lunch</strong>
-            Chicken Piccata, grilled salmon, falafel &amp; hummus plate, grain salad, roasted veg<br><br>
-            <strong style="color:var(--ink);display:block;margin-bottom:4px;">Dinner</strong>
-            Bavette steak, Chicken Milanese, eggplant Parmigiana, sides + wine &amp; beer bar
-          </div>
-        </div>
-        <div style="background:var(--cream);padding:28px 24px;">
-          <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.16em;font-weight:700;color:var(--terracotta);margin-bottom:14px;">Thursday · Day 3</div>
-          <div style="font-size:13px;color:var(--ink-soft);line-height:1.9;">
-            <strong style="color:var(--ink);display:block;margin-bottom:4px;">Breakfast</strong>
-            Shakshuka, Greek yogurt parfaits, avocado toast, seasonal fruit<br><br>
-            <strong style="color:var(--ink);display:block;margin-bottom:4px;">Lunch</strong>
-            Taco bar — spiced chicken &amp; fish, black beans, pico de gallo, guacamole, slaw<br><br>
-            <em style="font-size:12px;color:var(--ink-mute);">Venue closes at 5 PM — no dinner service</em>
-          </div>
-        </div>
-      </div>
-      <p style="margin-top:14px;font-size:12px;color:var(--ink-mute);">Menu above is representative of their weekly rotating program and will be confirmed after selection. All dishes available gluten-free. Vegan and plant-based options at every meal.</p>
-    </div>
-
-    <!-- Pricing breakdown -->
-    <div class="breakdown" style="margin-top:40px;">
-      <table>
-        <thead>
-          <tr>
-            <th>Line Item</th>
-            <th class="qty">Qty</th>
-            <th class="amount">Amount</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="section-head"><td colspan="3">Day 1 — Tuesday, July 7</td></tr>
-          <tr>
-            <td>Afternoon coffee break<span class="note" style="display:block;">14 guests</span></td>
-            <td class="qty">14</td>
-            <td class="amount">$294</td>
-          </tr>
-          <tr>
-            <td>Welcome dinner buffet<span class="note" style="display:block;">14 guests</span></td>
-            <td class="qty">14</td>
-            <td class="amount">$1,092</td>
-          </tr>
-          <tr>
-            <td>N/A + beer &amp; wine beverage package (2 hrs)<span class="note" style="display:block;">14 guests</span></td>
-            <td class="qty">14</td>
-            <td class="amount">$924</td>
-          </tr>
-          <tr>
-            <td>Captain &amp; service staff<span class="note" style="display:block;">7 hours</span></td>
-            <td class="qty">1</td>
-            <td class="amount">$672</td>
-          </tr>
-          <tr>
-            <td>Per-job service minimum</td>
-            <td class="qty">1</td>
-            <td class="amount">$1,290</td>
-          </tr>
-          <tr class="section-head"><td colspan="3">Day 2 — Wednesday, July 8</td></tr>
-          <tr>
-            <td>Breakfast buffet<span class="note" style="display:block;">14 guests</span></td>
-            <td class="qty">14</td>
-            <td class="amount">$504</td>
-          </tr>
-          <tr>
-            <td>N/A beverages all day (8:30 AM – 3:30 PM)<span class="note" style="display:block;">14 guests</span></td>
-            <td class="qty">14</td>
-            <td class="amount">$588</td>
-          </tr>
-          <tr>
-            <td>Lunch buffet<span class="note" style="display:block;">14 guests</span></td>
-            <td class="qty">14</td>
-            <td class="amount">$756</td>
-          </tr>
-          <tr>
-            <td>Dinner buffet<span class="note" style="display:block;">14 guests</span></td>
-            <td class="qty">14</td>
-            <td class="amount">$1,092</td>
-          </tr>
-          <tr>
-            <td>N/A + beer &amp; wine beverage package (2 hrs)<span class="note" style="display:block;">14 guests</span></td>
-            <td class="qty">14</td>
-            <td class="amount">$924</td>
-          </tr>
-          <tr>
-            <td>Captain &amp; service staff<span class="note" style="display:block;">14 hours</span></td>
-            <td class="qty">1</td>
-            <td class="amount">$1,344</td>
-          </tr>
-          <tr class="section-head"><td colspan="3">Day 3 — Thursday, July 9</td></tr>
-          <tr>
-            <td>Breakfast buffet<span class="note" style="display:block;">14 guests</span></td>
-            <td class="qty">14</td>
-            <td class="amount">$504</td>
-          </tr>
-          <tr>
-            <td>N/A beverages all day (8:30 AM – 3:30 PM)<span class="note" style="display:block;">14 guests</span></td>
-            <td class="qty">14</td>
-            <td class="amount">$588</td>
-          </tr>
-          <tr>
-            <td>Lunch buffet<span class="note" style="display:block;">14 guests</span></td>
-            <td class="qty">14</td>
-            <td class="amount">$756</td>
-          </tr>
-          <tr>
-            <td>Captain &amp; service staff<span class="note" style="display:block;">9 hours</span></td>
-            <td class="qty">1</td>
-            <td class="amount">$864</td>
-          </tr>
-          <tr class="section-head"><td colspan="3">Equipment &amp; Logistics</td></tr>
-          <tr>
-            <td>Eco-friendly biodegradable disposables<span class="note" style="display:block;">Plates, cups, cutlery &amp; napkins — all 3 days</span></td>
-            <td class="qty">1</td>
-            <td class="amount">$1,500</td>
-          </tr>
-          <tr>
-            <td>Transportation &amp; delivery<span class="note" style="display:block;">3 separate deliveries to Casa Luz</span></td>
-            <td class="qty">3</td>
-            <td class="amount">$1,260</td>
-          </tr>
-          <tr>
-            <td>Admin &amp; logistics fee (10%)</td>
-            <td class="qty">1</td>
-            <td class="amount">$1,495.20</td>
-          </tr>
-          <tr class="subtotal">
-            <td colspan="2">Subtotal</td>
-            <td class="amount">$16,447.20</td>
-          </tr>
-          <tr class="subtle">
-            <td colspan="2">NY State Sales Tax (8.875%)</td>
-            <td class="amount">$1,459.69</td>
-          </tr>
-          <tr class="total">
-            <td colspan="2"><span class="label">All-In Total</span>Caterer B · 3-Day Program</td>
-            <td class="amount">$17,906.89</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div><!-- /Caterer B -->
-
-  <!-- ── CATERER C ── -->
+<!-- ── CATERER C ── -->
   <div style="margin-top:80px;padding-top:80px;border-top:2px solid var(--ink);">
     <div class="option-header">
       <div class="option-num">C</div>
@@ -1663,90 +2020,7 @@
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════
-     CATERING AT-A-GLANCE
-═══════════════════════════════════════════ -->
-<section class="tight" style="background:var(--cream-deep);max-width:none;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);">
-  <div style="max-width:var(--max);margin:0 auto;padding:0 clamp(24px,5vw,80px);">
-    <div class="superhead" style="margin-bottom:12px;">Catering at a Glance</div>
-    <h2 class="headline">Side by side.</h2>
-    <div class="walk-grid" style="margin-top:32px;">
-      <div class="walk">
-        <div class="w-label">Caterer A · Seasonal American</div>
-        <div class="w-title">Chef-driven, full-service</div>
-        <div class="w-total">$16,853.85</div>
-        <div class="w-note">All-in · 3 days · 14–15 guests<br>Food, staffing, delivery, tax included</div>
-        <div style="margin-top:20px;padding-top:20px;border-top:1px solid var(--rule);font-size:13px;color:var(--ink-soft);line-height:1.8;">
-          Day 1: Dinner + bar only<br>
-          Days 2–3: Full day (bkfst → dinner + bar)<br>
-          Eco compostables · On-site team<br>
-          Customizable menus
-        </div>
-      </div>
-      <div class="walk">
-        <div class="w-label">Caterer B · Mediterranean & Plant-Forward</div>
-        <div class="w-title">Seasonal, abundant buffets</div>
-        <div class="w-total">$17,906.89</div>
-        <div class="w-note">All-in · 3 days · 14 guests<br>Food, staffing, delivery, tax included</div>
-        <div style="margin-top:20px;padding-top:20px;border-top:1px solid var(--rule);font-size:13px;color:var(--ink-soft);line-height:1.8;">
-          Day 1: Afternoon break + dinner + bar<br>
-          Days 2–3: Full day (bkfst → dinner + bar)<br>
-          Biodegradable disposables · 3 deliveries<br>
-          Rotating Mediterranean menu
-        </div>
-      </div>
-      <div class="walk">
-        <div class="w-label">Caterer C · Seasonal &amp; Plant-Forward</div>
-        <div class="w-title">Farm-to-table drop-off</div>
-        <div class="w-total">$8,112.43</div>
-        <div class="w-note">All-in · 3 days · 15 guests<br>Food, delivery, disposables, admin fee &amp; tax included</div>
-        <div style="margin-top:20px;padding-top:20px;border-top:1px solid var(--rule);font-size:13px;color:var(--ink-soft);line-height:1.8;">
-          Day 1: Afternoon break + welcome dinner<br>
-          Days 2–3: Full day (bkfst → dinner)<br>
-          Drop-off only · No on-site staff<br>
-          Compostable eco-friendly packaging
-        </div>
-      </div>
-            <div class="walk" style="background:var(--cream-warm);">
-        <div class="w-label" style="color:var(--ink-soft);">What to Consider</div>
-        <div class="w-title">Choosing your direction</div>
-        <div style="margin-top:20px;font-size:14px;color:var(--ink-soft);line-height:1.8;">
-          <strong style="color:var(--ink);display:block;margin-bottom:6px;">Choose A if:</strong>
-          You want maximum flexibility, a curated American menu, and a single team handling everything end-to-end.<br><br>
-          <strong style="color:var(--ink);display:block;margin-bottom:6px;">Choose B if:</strong>
-          You want Mediterranean flavors, abundant plant-forward options, and a Brooklyn-rooted team with a rotating seasonal menu.<br><br><strong style="color:var(--ink);display:block;margin-bottom:6px;">Choose C if:</strong>You want beautiful, seasonal food at the lowest all-in cost. Best fit if your team can self-manage meal setup and wants budget focused on the retreat itself.
-        </div>
-      </div>
-    </div>
-    <p style="margin-top:20px;font-size:13px;color:var(--ink-mute);">All prices are all-in and include Cocoon's concierge and coordination fee. Deposits and final headcount adjustments confirmed upon booking.</p>
-  </div>
-</section>
 
-<!-- ═══════════════════════════════════════════
-     NEXT STEPS
-═══════════════════════════════════════════ -->
-<div class="callout ink">
-  <div class="inner">
-    <div class="superhead" style="margin-bottom:20px;color:rgba(255,255,255,0.6);">Next Steps</div>
-    <h2 class="title" style="font-size:clamp(36px,5vw,72px);">Three things<br>to decide.</h2>
-    <div class="decisions">
-      <div class="decision">
-        <div class="d-num">01</div>
-        <div class="d-title">Furniture Selection</div>
-        <div class="d-body">Review the Lightning Society catalog above and share which pieces you'd like for the retreat. Cocoon will confirm availability and send a furniture subtotal.</div>
-      </div>
-      <div class="decision">
-        <div class="d-num">02</div>
-        <div class="d-title">Catering Choice</div>
-        <div class="d-body">Three caterer proposals are in this deck — full-service (A &amp; B) and drop-off (C). Once you've reviewed all three, let us know which direction fits your group best.</div>
-      </div>
-      <div class="decision">
-        <div class="d-num">03</div>
-        <div class="d-title">Confirm AV & Bartending</div>
-        <div class="d-body">No AV needs confirmed yet — worth a quick check with your team. Bartending for dinner nights is also TBD; we can add it to the catering scope.</div>
-      </div>
-    </div>
-  </div>
 </div>
 
 <!-- ═══════════════════════════════════════════
